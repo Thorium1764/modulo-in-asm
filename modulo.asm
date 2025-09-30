@@ -15,6 +15,8 @@ _modulo: ; rdi: divident , rsi: divisor
    test rax, rax ; some weird bitwise shit
    jge .done
    add rax, rsi
+.done:
+   ret
 
 _bigmodulo:
 
@@ -25,7 +27,5 @@ _nthbit: ; num in rax , n in rcx , result in rbx
    and rbx, 1
    ret
 
-.done
-   ret
 
    
